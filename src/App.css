@@ -1,0 +1,157 @@
+@import url(./index.css);
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Montserrat;
+  font-size: 12pt;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: 60px 1fr;
+  height: 100vh;
+}
+
+.header {
+  grid-column: 1 / -1;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(5, auto) 1fr auto;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: thin solid rgb(228, 228, 228);
+}
+
+.sidebar {
+  background-color: #fff;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  border-right: thin solid rgb(228, 228, 228);
+}
+
+.sidebar .menu-apps {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.sidebar .menu-apps li {
+  border-radius: 5px;
+  height: 40px;
+  width: 40px;
+  margin-bottom: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.sidebar .menu-apps a {
+  text-decoration: none;
+  color: black;
+}
+
+.content {
+  background-color: #fff;
+}
+
+.button {
+  background-color: #FF6E40;
+  border-radius: 10px;
+  min-height: 40px;
+}
+
+
+.doc {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 100vh;
+}
+
+.bar {
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  gap: 10px;
+  border-right: thin solid #f2f2f2;
+  overflow: scroll;
+  padding: 2%;
+}
+
+.document-type, .models, .incorporate-data {
+  padding: 20px;
+}
+
+.document-type select,
+.document-type textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: thin solid #ccc;
+  border-radius: 4px;
+}
+
+.document-type textarea {
+  height: 70px;
+
+}
+
+.document-type button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.document-type button:hover {
+  background-color: #0056b3;
+}
+
+.models button, .incorporate-data button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.models button:hover, .incorporate-data button:hover {
+  background-color: #0056b3;
+}
+
+.out {
+  background-color: #ffffff;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.petition-content {
+ margin: 2%;
+ padding: 5%;
+ background-color: #e7e7e7;
+ border-radius: 10px;
+}
+
+.petition-content h1 {
+  margin-top: 0;
+}
+
+.petition-content p {
+  margin: 20px 0;
+}
