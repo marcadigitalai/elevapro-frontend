@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 # elevapro
 # elevapro
 # elevapro-frontend
+# elevapro-frontend
