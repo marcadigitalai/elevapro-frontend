@@ -1,19 +1,12 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChartLine,
-  faSquarePollHorizontal,
-  faLayerGroup,
-  faAtom
-} from "@fortawesome/free-solid-svg-icons";
 
 import Docs from "./components/Apps/Documents";
 import "./App.css";
 
 const Home = () => <h1>Home Page</h1>;
 const GPT = () => <h1>GPT Page</h1>;
-const Documents = () => <Docs/>;
+const Documents = () => <Docs />;
 const Images = () => <h1>Images Page</h1>;
 const Agents = () => <h1>Agents Page</h1>;
 
@@ -22,7 +15,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className="container">
+      <div className="dashboard">
         <header className="header">
           {buttons.map((_, index) => (
             <div key={index} className="button"></div>
@@ -32,23 +25,23 @@ const App = () => {
           <div className="sideHeader"></div>
           <ul className="menu-apps">
             <li>
-              <Link to="/GPT">
-                <FontAwesomeIcon icon={faSquarePollHorizontal} />
+              <Link to="/CRM">
+                <img src="/svg/menu.svg" alt="" />
               </Link>
             </li>
             <li>
-              <Link to="/Documents">
-                <FontAwesomeIcon icon={faLayerGroup} />
+              <Link to="/apps">
+                <img src="/svg/app.svg" alt="" />
               </Link>
             </li>
             <li>
-              <Link to="/Images">
-              <FontAwesomeIcon icon={faChartLine} />
+              <Link to="/dashboard">
+                <img src="/svg/slideshow.svg" alt="" />
               </Link>
             </li>
             <li>
-              <Link to="/Agents">
-                <FontAwesomeIcon icon={faAtom} />
+              <Link to="/agents">
+                <img src="/svg/box-2.svg" alt="" />
               </Link>
             </li>
           </ul>
@@ -57,10 +50,10 @@ const App = () => {
         <main className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/GPT" element={<GPT />} />
-            <Route path="/Documents" element={<Documents />} />
-            <Route path="/Images" element={<Images />} />
-            <Route path="/Agents" element={<Agents />} />
+            <Route path="/CRM" element={<GPT />} />
+            <Route path="/apps" element={<Documents />} />
+            <Route path="/dashboard" element={<Images />} />
+            <Route path="/agents" element={<Agents />} />
           </Routes>
         </main>
       </div>

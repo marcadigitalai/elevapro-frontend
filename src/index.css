@@ -20,3 +20,11 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #c5c5c5;
 }
+
+:root {
+  --primary-color: rgb(99, 102, 241);
+}
+
+* {
+  box-sizing: border-box;
+}
